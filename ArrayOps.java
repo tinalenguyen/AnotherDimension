@@ -59,4 +59,17 @@ public class ArrayOps {
       return arrsum;
   }
 
+  public static int[] sumCols(int[][] matrix){
+//returns an array with each element benig the sum of the individual columns of the 2D array
+    int[] colsum = new int[matrix[0].length];
+
+      for (int i = 0 ; i < matrix.length ; i++){
+        for (int k = 0; k < matrix[0].length; k++){
+          colsum[k] += matrix[i][k];
+        }
+
+
+      }
+return colsum;
+  }
 }
