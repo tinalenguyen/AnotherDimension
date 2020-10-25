@@ -114,10 +114,6 @@ boolean equalsum = true;
       int[] colsums = sumCols(matrix);
 
       return rowsums[row] == colsums[col];
-
-
-
-
     }
 
 }
