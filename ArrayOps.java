@@ -107,6 +107,17 @@ boolean equalsum = true;
 
   }
 
+    public static boolean isLocationMagic(int[][] matrix, int row, int col){
+  //takes a 2d array and returns true when the row and column specified have the same sumCols
 
+      int[] rowsums = sumRows(matrix);
+      int[] colsums = sumCols(matrix);
+
+      return rowsums[row] == colsums[col];
+
+
+
+
+    }
 
 }
