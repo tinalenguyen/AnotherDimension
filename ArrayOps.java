@@ -18,7 +18,7 @@ public class ArrayOps {
     int large = 0;
     for (int i = 0 ; i < arr.length - 1;i++){
 
-      large = Math.max(arr[i], arr[i+1]);
+      large = Math.max(arr[0], arr[i]);
 
     }
 
@@ -37,5 +37,17 @@ public class ArrayOps {
     return arrsum;
   }
 
+  public static int[] largestInRows(int[][] matrix){
+//takes a nonempty 2D array of int and returns a 1D array of int with each element being the largest element of the rows
+
+    int[] larges = new int[matrix.length];
+
+    for (int i = 0; i < matrix.length; i++){
+      larges[i] = largest(matrix[i]);
+
+    }
+    return larges;
+
+  }
 
 }
