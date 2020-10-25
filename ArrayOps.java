@@ -47,7 +47,16 @@ public class ArrayOps {
 
     }
     return larges;
+  }
 
+  public static int sum(int[][] arr){
+//takes a 2D array of int and returns the sum of all individual values in all of the arrays
+    int arrsum = 0;
+    for (int i = 0; i < arr.length ; i++){
+        arrsum += sum(arr[i]);
+
+    }
+      return arrsum;
   }
 
 }
