@@ -60,7 +60,7 @@ public class ArrayOps {
   }
 
   public static int[] sumCols(int[][] matrix){
-//returns an array with each element benig the sum of the individual columns of the 2D array
+//returns an array with each element being the sum of the individual columns of the 2D array
     int[] colsum = new int[matrix[0].length];
 
       for (int i = 0 ; i < matrix.length ; i++){
@@ -72,4 +72,41 @@ public class ArrayOps {
       }
 return colsum;
   }
+
+  public static boolean isRowMagic(int[][] matrix){
+  //takes a 2d array and returns true when each row has the same sum, otherwise false
+boolean equalsum = true;
+      for (int i = 0 ; i < matrix.length;i++){
+        if (sum(matrix[0]) == sum(matrix[i])){
+          equalsum = true;
+        }
+        else {
+          equalsum = false;
+        break ;
+      }
+    }
+    return equalsum;
+
+  }
+
+  public static boolean isColMagic(int[][] matrix){
+//takes 2d array and returns true when each column hsa the same sum
+    boolean equalsum = true;
+      int[] colsums = sumCols(matrix);
+
+      for (int i = 0; i < colsums.length; i++){
+        if (colsums[0] == colsums[i]){
+          equalsum = true;
+        }
+        else{
+          equalsum = false;
+          break;
+        }
+      }
+      return equalsum;
+
+  }
+
+
+
 }
