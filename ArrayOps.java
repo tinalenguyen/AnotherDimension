@@ -25,7 +25,17 @@ public class ArrayOps {
     return large;
   }
 
+  public static int[] sumRows(int[][] matrix){
+//takes a 2D array of int and returns a 1D array of int with each element being the sum of the individual rows of the 2D array
 
+    int[] arrsum = new int[matrix.length];
+
+    for (int i = 0 ; i < matrix.length; i++){
+      arrsum[i] = sum(matrix[i]);
+
+    }
+    return arrsum;
+  }
 
 
 }
